@@ -16,6 +16,18 @@ def printInterface(interface):
     print(interface[8])
     print(interface[9])
 
+def printGrille(grille):
+    print(grille[0])
+    print(grille[1])
+    print(grille[2])
+    print(grille[3])
+    print(grille[4])
+    print(grille[5])
+    print(grille[6])
+    print(grille[7])
+    print(grille[8])
+    print(grille[9])
+
 def firstmouve(interface):
     #print grille
     printInterface(interface)
@@ -27,6 +39,20 @@ def firstmouve(interface):
     interface[ligne][colonne] = " "
 
     printInterface(interface)
+
+    grille[ligne][colonne] = "F"
+    grille[ligne][colonne-1] = "s"
+    grille[ligne][colonne+1] = "s"
+
+    grille[ligne-1][colonne] = "s"
+    grille[ligne-1][colonne-1] = "s"
+    grille[ligne-1][colonne+1] = "s"
+
+    grille[ligne+1][colonne] = "s"
+    grille[ligne+1][colonne-1] = "s"
+    grille[ligne+1][colonne+1] = "s"
+
+
 
 def minGen(grille):
     grille[0][r.randint(0,9)]= "X"
@@ -48,3 +74,4 @@ def minecp(grille):
                 row = row
 
 firstmouve(practice)
+printGrille(grille)
