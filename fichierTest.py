@@ -1,13 +1,52 @@
-plateau = []
-case=[]
-nb = 10
-print(plateau)
+import random as r
 
-for z in range(nb):
-    case.append("*")
+#Déclaration des variables
+ligne, colonne = 0, 0
+alive = 0
+cpDrapeau = 0
 
-for i in range(nb):
+#Création de la quantité de mine
+def minecrea(taille):
+    if taille == "Practice":
+        return 10
+    if taille == "Medium":
+        return 40
+    if taille == "Hard":
+        return 99
 
-    plateau.append(case)
+#Création du plateau et de la grille
+def creation(taille):
+    cplateau = []
+    case=[]
 
-print(plateau)
+    if taille == "Practice":
+        nbcolonne = 10
+        nbligne = 10
+    if taille == "Medium":
+        nbcolonne = 15
+        nbligne = 20
+    if taille == "Hard":
+        nbcolonne = 20
+        nbligne = 30
+
+    cplateau = [["*"]*nbcolonne]*nbligne 
+
+    cplateau[0][0] = 1
+    print(cplateau)
+
+    return cplateau
+
+
+
+taille = "Practice"
+plateau = creation(taille)
+
+
+
+
+
+
+
+
+
+
