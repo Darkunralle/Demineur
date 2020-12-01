@@ -180,7 +180,7 @@ def revealFirst(grille,plateau):
         for rcolonne in range(len(grille[rligne])):
             if grille[rligne][rcolonne] == "s":
                 plateau[rligne][rcolonne] = " "
-    for i in range(10):
+    for cpi in range(10):
         rectif(grille,plateau)
 
 def reveal(grille,ligne,colonne):
